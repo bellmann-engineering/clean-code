@@ -53,6 +53,29 @@ Now, the `calculateAreaAndPerimeter` function uses separate variables (`area` an
      ```cpp
      void complexMethod() {
          // ... (long and complex code)
+        int x = 5;
+        double y = 8.2;
+
+        // Task 1
+        for (int i = 0; i < x; ++i) {
+              if (i % 2 == 0) {
+                  std::cout << "Even number: " << i << std::endl;
+              } else {
+                  std::cout << "Odd number: " << i << std::endl;
+              }
+         }
+
+       // Task 2
+       double result = x * y + 10 / (y - 2);
+
+       // Output the result
+       std::cout << "Result: " << result << std::endl;
+
+       // Task 3
+       int square = calculateSquare(x);
+       std::cout << "Square of " << x << ": " << square << std::endl;
+   
+       // ... (more code)
      }
      ```
    - **Explanation:** The method `complexMethod` is long and performs multiple tasks.
@@ -282,14 +305,14 @@ Now, the `calculateAreaAndPerimeter` function uses separate variables (`area` an
      ```
 
 11. **Introduce Null Object:**
-    - **Problematic Code:**
+   - **Problematic Code:**
       ```cpp
       User* getUserById(int userId) {
           // ... (return user or nullptr if not found)
       }
       ```
-    - **Explanation:** Frequent checks for null references.
-    - **Refactored Code:**
+   - **Explanation:** Frequent checks for null references.
+   - **Refactored Code:**
       ```cpp
       class NullUser : public User {
           // ... (implement default behavior or do nothing)
