@@ -167,8 +167,6 @@ Now, the `calculateAreaAndPerimeter` function uses separate variables (`area` an
          }
      };
      ```
-Sure, let's continue with the remaining refactoring techniques:
-
 7. **Extract Class:**
    - **Problematic Code:**
      ```cpp
