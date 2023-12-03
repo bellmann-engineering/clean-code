@@ -300,8 +300,6 @@ Now, the `calculateAreaAndPerimeter` function uses separate variables (`area` an
       }
       ```
 
-Certainly! Let's continue with the remaining refactoring techniques:
-
 12. **Encapsulate Fields:**
    - **Problematic Code:**
      ```cpp
@@ -334,7 +332,15 @@ Certainly! Let's continue with the remaining refactoring techniques:
    - **Problematic Code:**
      ```cpp
      bool isEligibleForDiscount(int age, int purchaseAmount) {
-         return age >= 18 && purchaseAmount > 100;
+       if (age >= 18) {
+           if (purchaseAmount > 100) {
+               return true;
+           } else {
+               return false;
+           }
+       } else {
+        return false;
+       }
      }
      ```
    - **Explanation:** Multiple conditions that can be simplified.
