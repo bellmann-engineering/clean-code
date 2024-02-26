@@ -23,9 +23,9 @@ int main() {
     BankSystem bs;
 
     // Account transactions
-    bs.transaction(1000); // Deposit $1000
-    bs.transaction(500);  // Deposit $500
-    bs.transaction(-200); // Withdraw $200
+    bs.transaction(1000); // Deposit 1000 €
+    bs.transaction(500);  // Deposit 500 €
+    bs.transaction(-200); // Withdraw 200 €
 
     // Display total balance
     bs.showBalance();
