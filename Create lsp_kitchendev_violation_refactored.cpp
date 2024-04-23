@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <string>
 
 class KitchenDevice {
@@ -16,7 +17,7 @@ public:
         // Default implementation does nothing
         std::cout << "Setting temperature is not supported for this kitchen device.\n";
     }
-    
+
     virtual ~KitchenDevice() = default;
 };
 
@@ -70,8 +71,9 @@ public:
 };
 
 int main() {
-    KitchenDevice* device1 = new Toaster();
-    KitchenDevice* device2 = new Refrigerator();
+    // Using std::unique_ptr to manage memory of KitchenDevice objects
+    std::unique_ptr<KitchenDevice> device1 = std::make_unique<Toaster>();
+    std::unique_ptr<KitchenDevice> device2 = std::make_unique<Refrigerator>();
 
     // Using KitchenDevice pointers to refer to different types of kitchen devices
     device1->turnOn();  // Toaster is heating up
@@ -81,7 +83,5 @@ int main() {
     device1->setTemperature(200);  // Setting toaster temperature
     device2->setTemperature(5);  // Setting refrigerator temperature
 
-    // Clean up
-    delete device1;
-    delete device2;
+    // Unique pointers automatically manage memory, so no explicit delete needed
 }
