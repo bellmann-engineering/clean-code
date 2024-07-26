@@ -1,5 +1,3 @@
-Hier sind die Beispiele für die verschiedenen Refactoring-Techniken in Java, strukturiert wie im angegebenen GitHub-Repository:
-
 # Refactoring-Techniken in Java
 
 ## Split Temporary Variable
