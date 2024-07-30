@@ -117,7 +117,7 @@ public class Example {
 ```
 
 ## Inline Method
-- **Problem:** Eine Methode ist zu einfach oder kurz, um nützlich zu sein.
+- **Problem:** Eine Methode ist zu einfach oder kurz, um eine eigene Methode zu rechtfertigen.
 
 ### Problematisches Beispiel
 ```java
@@ -134,7 +134,7 @@ public class Example {
 ```
 
 ### Lösung
-- **Lösung:** Inlinieren Sie die Methode direkt in den Code.
+- **Lösung:** Die Methode direkt inline in den Code.
 
 ```java
 public class Example {
@@ -414,10 +414,6 @@ public class Main {
     }
 }
 ```
-
-Hier sind die Java-Beispiele für die Refactoring-Techniken mit dem Einsatz von `Optional<>` anstelle von Null-Objekten.
-
-# Refactoring-Techniken in Java
 
 ## Introduce Null Object / Use Optional
 - **Problem:** Häufige Überprüfungen auf null-Referenzen.
