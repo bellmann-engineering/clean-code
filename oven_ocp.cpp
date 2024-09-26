@@ -74,3 +74,5 @@ int main() {
         case 0:
         default:
             oven.setMode(std::make_unique<OvenMode>());
+    }
+}
