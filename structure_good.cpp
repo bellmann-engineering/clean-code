@@ -14,7 +14,7 @@ public:
         accountBalances_.push_back(-amount);
     }
 
-    void ShowTotalBalance() {
+    void ShowTotalBalance() const {
         double totalBalance = 0;
         for (double balance : accountBalances_) {
             totalBalance += balance;
